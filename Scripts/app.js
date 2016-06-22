@@ -1,3 +1,9 @@
+/*  
+
+    Khushdial Singh - 300878370 - COMP125/S2016/MidTerm
+
+*/
+
 // setup your IIFE (Immediately Invoked Function Expression)
 (function () {
 "use strict";
