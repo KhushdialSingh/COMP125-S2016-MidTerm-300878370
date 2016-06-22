@@ -1,6 +1,8 @@
 // setup your IIFE (Immediately Invoked Function Expression)
 (function () {
 "use strict";
+
+//variable containing all the text to show in the index document
 var text = [
     "Now is the time to travel to Greece. The country may be going through an economic crisis, but many travellers say that it hasn't impacted the experience of visiting. Plus, there may be some great deals.\n\n Greece has 1,400 islands, though only 230 of them are inhabited. \n\nAnd while everyone knows about Santorini and Mykonos, there are gorgeous lesser-known islands in Greece, too.",
     
@@ -23,6 +25,7 @@ var text = [
     "Near the more well-known Crete, Gavdos is the most southern island in Greece — and the most southern spot in Europe discounting the Canaries. Only accessible by ferry, the remote island has only about 50 permanent residents, and can feel like your private playground. Local legend has it that the island was the home of goddess Calypso, who kept Odysseus prisoner here. Today, a favorite tourist activity is to visit the spot believed to be her cave. Be warned, you won't find any luxury hotels here. While the romantically under-developed, super laid back island has a number of rooms for rent, those are limited, as the real draw here for many is the free, seaside camping."
 ];
 
+//displaying the texts in the correct paragraphs
 document.getElementById('IntroParagraph').innerText = text[0];
 document.getElementById('Folegandros').innerText = text[1];  
 document.getElementById('Alonissos').innerText = text[2]; 
@@ -33,5 +36,23 @@ document.getElementById('Milos').innerText = text[6];
 document.getElementById('Hydra').innerText = text[7]; 
 document.getElementById('Ithaca').innerText = text[8]; 
 document.getElementById('Gavdos').innerText = text[9]; 
+
+//assigning the 4 fields to local variables 
+var fName = document.getElementById('firstName');
+var lName = document.getElementById('lastName');
+var cNumber = document.getElementById('contactNumber');
+var email = document.getElementById('email');
+var message = document.getElementById('yourMessage');
+
+//writing the content of the fields in the console
+document.getElementById('sendButton').addEventListener("click", function(){
+    console.log("First name: " + fName.value);
+    console.log("Last name: " + lName.value);
+    console.log("Contact number: " + cNumber.value);
+    console.log("Email: " + email.value);
+    console.log("Message: " + message.value);
+    event.preventDefault();
+});
+
 })();
 
